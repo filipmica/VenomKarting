@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+
+.navbar {
+    background-color: grey;
+    overflow: hidden;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black; 
+}
+
+.hero {
+    background-image: url('https://th.bing.com/th/id/R.490f54c1f4e3a1a5302d4d1a2bdc3c11?rik=a2p5lHzqaOnytg&riu=http%3a%2f%2fargent.fia.com%2fkarting%2fnews2010%2fpf%2fimages%2fdownload6.jpg&ehk=DLsLjoYcWJHL0%2f%2fUudiy1Jk5o6GunL%2b2k5RgOXeM6uo%3d&risl=1&pid=ImgRaw&r=0');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 70px;
+}
+
+.hero button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.hero button:hover {
+    background-color: red;
+}
+
+section {
+    padding: 40px;
+    background-color: grey;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}

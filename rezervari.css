@@ -1,0 +1,220 @@
+/* Stilizare generală pentru body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black; /* Fundal negru */
+    color: black; /* Text alb */
+    background-image: url('https://cloud-live.ams3.digitaloceanspaces.com/uploads/booking_background_images/404/e65/c/BGR-booking_background_image.jpg'); /* Imaginea de fundal pentru secțiunea de rezervări */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Stilizare pentru bara de navigație */
+.navbar {
+    background-color: black;
+    overflow: hidden;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Stilizare pentru containerul principal */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Stilizare pentru secțiunea de rezervare */
+.reservation-section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* Stilizare pentru formularul de rezervare */
+#reservationForm {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background-color: hsl(120, 28%, 81%);
+    border-radius: 8px;
+}
+
+#reservationForm label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+#reservationForm input[type="text"],
+#reservationForm input[type="date"] {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#reservationForm button {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+}
+
+#reservationForm button:hover {
+    background-color: darkgreen;
+}
+
+/* Stilizare pentru secțiunea "Sesiune Adulți", "Sesiune Junior", "Venom Grand Prix Adult" și "Happy Hour Adult(s)" */
+.session-adult,
+.session-junior,
+.venom-grand-prix-adult,
+.happy-hour-adult,
+.happy-hour-children {
+    background-color: hsl(120, 28%, 81%);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    text-align: left;
+    border-bottom: 1px solid #000000;
+}
+
+.session-adult h3,
+.session-junior h3,
+.venom-grand-prix-adult h3,
+.happy-hour-adult h3,
+.happy-hour-children h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #000000;
+}
+
+.session-adult p,
+.session-junior p,
+.venom-grand-prix-adult p,
+.happy-hour-adult p,
+.happy-hour-children p {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+/* Stilizare pentru secțiunea "Sesiune Adulți" */
+.session-adult {
+    background-color: hsl(120, 28%, 81%);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    text-align: left;
+    border-bottom: 1px solid #000000;
+}
+
+.session-adult h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #000000;
+}
+
+.session-adult p {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+/* Stilizare pentru secțiunea "Sesiune Junior" */
+.session-junior {
+    background-color: hsl(120, 28%, 81%);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    text-align: left;
+    border-bottom: 1px solid #000000;
+}
+
+.session-junior h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #000000;
+}
+
+.session-junior p {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+/* Stilizare pentru secțiunea "Venom Grand Prix Adult" */
+.venom-grand-prix-adult {
+    background-color: hsl(120, 28%, 81%);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    text-align: left;
+    border-bottom: 1px solid #000000;
+}
+
+.venom-grand-prix-adult h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #000000;
+}
+
+.venom-grand-prix-adult p {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+/* Stilizare pentru secțiunea "Happy Hour Adult(s)" */
+.happy-hour-adult {
+    background-color: hsl(120, 28%, 81%);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    text-align: left;
+    border-bottom: 1px solid #000000;
+}
+
+.happy-hour-adult h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #000000;
+}
+
+.happy-hour-adult p {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+/* Stilizare pentru secțiunea "Happy Hour Children" */
+.happy-hour-children {
+    background-color: hsl(120, 28%, 81%);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    text-align: left;
+    border-bottom: 1px solid #000000;
+}
+
+.happy-hour-children h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #000000;
+}
+
+.happy-hour-children p {
+    font-size: 16px;
+    margin-bottom: 8px;
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezervări - Venom Karting Sibiu</title>
+    <link rel="stylesheet" href="rezervari.css"> <!-- Legătura către fișierul CSS -->
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="index.html#home">Acasă</a>
+            <a href="index.html#about">Despre</a>
+            <a href="index.html#services">Servicii</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+    </header>
+
+    <section class="reservation-section">
+        <div class="container">
+            <h2>Rezervă acum la Venom Karting Sibiu</h2>
+            <form id="reservationForm">
+                <label for="nume">Introdu numele:</label>
+                <input type="text" id="nume" name="nume" placeholder="Numele tău" required>
+                
+                <label for="telefon">Introdu numărul de telefon:</label>
+                <input type="text" id="telefon" name="telefon" placeholder="Numărul tău de telefon" required>
+
+                <label for="data">Introdu data de rezervare:</label>
+                <input type="date" id="data" name="data" required>
+                
+                <button type="button" id="butonSubmit">Rezervă</button>
+            </form>
+
+            <div class="session-adult">
+                <h3>Sesiune Adulți</h3>
+                <p>Preț: 70 de lei</p>
+                <p>1-10 persoane</p>
+                <p>Disponibil: Lun · Mar · Mie · Joi · Vin · Sâm · Dum</p>
+                <p>Durată: 8 minute</p>
+            </div>
+
+            <div class="session-junior">
+                <h3>Sesiune Junior</h3>
+                <p>Preț: 50 de lei</p>
+                <p>1-10 persoane</p>
+                <p>Disponibil: Lun · Mar · Mie · Joi · Vin · Sâm · Dum</p>
+                <p>Durată: 8 minute</p>
+            </div>
+
+            <div class="venom-grand-prix-adult">
+                <h3>Venom Grand Prix Adult</h3>
+                <p>Preț: 100 de lei</p>
+                <p>5-10 persoane</p>
+                <p>Disponibil: Lun · Mar · Mie · Joi · Vin · Sâm · Dum</p>
+                <p>Durata: 4 minute calificare + 9 minute cursa</p>
+            </div>
+
+            <div class="happy-hour-adult">
+                <h3>Happy Hour Adult(s)</h3>
+                <p>Preț: 60 de lei</p>
+                <p>1-10 persoane</p>
+                <p>Happy Hour drive: Lun - Joi</p>
+                <p>Disponibil: Lun · Mar · Mie · Joi</p>
+                <p>Durată: 8 minute</p>
+            </div>
+
+            <div class="happy-hour-children">
+                <h3>Happy Hour Children</h3>
+                <p>Preț: 40 de lei</p>
+                <p>1-6 persoane</p>
+                <p>Happy Hour drive: Lun - Joi</p>
+                <p>Disponibil: Lun · Mar · Mie · Joi</p>
+                <p>Durată: 8 minute</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Venom Karting Sibiu. Toate drepturile rezervate.</p>
+    </footer>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-analytics.js";
+        import { getFirestore, addDoc, collection } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-firestore.js";
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAzzQQr_X8ZJWfrWcqa67kBeJ7tklx1c9E",
+            authDomain: "venomkarting-72e96.firebaseapp.com",
+            projectId: "venomkarting-72e96",
+            storageBucket: "venomkarting-72e96.appspot.com",
+            messagingSenderId: "970349874980",
+            appId: "1:970349874980:web:a5404591899a6477296db1",
+            measurementId: "G-BBV4NMJL1G"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const db = getFirestore(app);
+
+        document.getElementById('butonSubmit').addEventListener('click', async (e) => {
+            e.preventDefault();
+            const nume = document.getElementById("nume").value;
+            const telefon = document.getElementById("telefon").value;
+            const data = document.getElementById("data").value;
+
+            try {
+                await addDoc(collection(db, "rezervari"), {
+                    Nume: nume,
+                    Telefon: telefon,
+                    Data: data,
+                });
+                alert("Rezervare efectuată cu succes!");
+            } catch (error) {
+                console.error("Eroare la adăugarea documentului: ", error);
+                alert("A apărut o eroare. Vă rugăm să încercați din nou.");
+            }
+        });
+    </script>
+</body>
+</html>
